@@ -21,7 +21,7 @@
 - npm start
 
 ## test routes with Postman
-- Postman is an awesome client to test the routes on created here.  Sign up for free [here](https://www.postman.com/)
+- Postman is an awesome client to test the routes created here.  Sign up for free [here](https://www.postman.com/) to download and start testing.
 
 - Post an item: localhost:3000/inventory with request body of "name": "name of item", "description":"description of item".
 
