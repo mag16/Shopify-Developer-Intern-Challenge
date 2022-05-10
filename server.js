@@ -21,7 +21,7 @@ try {
 }
 
 const inventoryRouter = require("./Routes/inventory");
-server.use("/api/inventory", inventoryRouter);
+server.use("/inventory", inventoryRouter);
 
 server.listen(port, () => {
     console.log(`Shopify server started --> PORT ${port}`)
