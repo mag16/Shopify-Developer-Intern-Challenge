@@ -1,4 +1,4 @@
-# Shopify-Developer-Intern-Challenge
+# Shopify-BackEnd Developer-Intern-Challenge
 
 ## Dependencies used:
 - Express.js: middleware/support for HTTP requests. (npm install express.js)
