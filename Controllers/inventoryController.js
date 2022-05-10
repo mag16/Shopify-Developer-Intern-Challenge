@@ -5,7 +5,7 @@ const Inventory = require("../Model/inventorydata.js");
 
 const router = express.Router();
 
-// View a list of all inventory
+// View a list of all inventory.
 const getInventory = async (req, res) => {
   try {
     const inventory = await Inventory.find();
@@ -16,6 +16,7 @@ const getInventory = async (req, res) => {
   }
 };
 
+//get one item from iventory by providing its ID.
 const getOneItem = async (req, res) => {
     const { id } = req.params;
 
@@ -28,6 +29,7 @@ const getOneItem = async (req, res) => {
   }
 };
 
+//POST Item to inventory.
 const addInventory = async (req, res) => {
   const newItem = new Inventory({
     name: req.body.name,
@@ -43,6 +45,7 @@ const addInventory = async (req, res) => {
   }
 };
 
+//PUT update inventory item with its ID.
 const updateInventory = async (req, res) => {
   const id = req.params.id;
   try {
@@ -62,6 +65,7 @@ const updateInventory = async (req, res) => {
   }
 };
 
+//delete item from inventory based on ID.
 const deleteInventory = async (req, res) => {
   const id = req.params.id;
 
