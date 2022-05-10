@@ -20,5 +20,18 @@
 ## Start server
 - npm start
 
+## test routes with Postman
+- Postman is an awesome client to test the routes on created here.  Sign up for free [here](https://www.postman.com/)
+
+- Post an item: localhost:3000/inventory with request body of "name": "name of item", "description":"description of item".
+
+- Get all items: after adding a couple of items with a Post request we can now get all items with a get request to localhost:3000/inventory.
+
+- Get one item: provide the id generated to the following route to get the item (GET request) to localhost:3000/inventory/:id.
+
+- Edit an item: provide the id to the url (PUT request) to localhost:3000/inventory/:id and change item name or description.
+
+- Delete an item: provide the id to the url (DELETE request) to localhost:3000/inventory/:id.  This returns the id that was deleted. Run a (Get reqquest) to get new list with deleted item removed.
+
 
 
