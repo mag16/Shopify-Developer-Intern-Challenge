@@ -18,6 +18,8 @@ start at "Create a MongoDB Atlas cluster".
 
 - Once you obtain your connection string add that to line 5 in server.js (const url = 'connection string').
 
+- for testing purposes you can go ahead and just clone the application and test endpoints with a client app like Postman (instructions below).
+
 ## Start server
 - npm start
 
