@@ -18,7 +18,7 @@ start at "Create a MongoDB Atlas cluster".
 
 - Once you obtain your connection string add that to line 5 in server.js (const url = 'connection string').
 
-- for testing purposes you can go ahead and just clone the application and test endpoints with a client app like Postman (instructions below).
+- for testing purposes you can go ahead and just clone the repository and test endpoints with a client app like Postman (instructions below).
 
 ## Start server
 - npm start
@@ -26,6 +26,8 @@ start at "Create a MongoDB Atlas cluster".
 ## test routes with Postman
 - Postman is an awesome client to test the routes created here.  Sign up for free [here](https://www.postman.com/) to download and start testing.
 
+
+## Routes defined
 - Post an item: localhost:3000/inventory with request body of "name": "name of item", "description":"description of item" to (POST).
 
 - Get all items: after adding a couple of items with a Post request we can now get all items with a get request (GET) to localhost:3000/inventory.
@@ -35,6 +37,16 @@ start at "Create a MongoDB Atlas cluster".
 - Edit an item: provide the id to the url (PUT request) to localhost:3000/inventory/:id and change item name or description.
 
 - Delete an item: provide the id to the url (DELETE request) to localhost:3000/inventory/:id.  This returns the id that was deleted. Run a (GET request) to get new list with deleted item removed.
+
+## Ability to create warehouses/locations and assign inventory to specific locations
+
+- Post a location: localhost:3000/locations with request body of "name": "name of location", "location":"address of location" to (POST).
+
+- Get all locations: after adding a couple of locations with a Post request we can now get all locations with a get request (GET) to localhost:3000/locations.
+
+- We can then get id's of each location and add items to them (with ids) or manually to (POST) localhost:3000/locations/:id.
+
+
 
 
 

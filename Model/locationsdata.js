@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
- 
+ //Schema created for warehouse locations assign inventory items to specific locations
+const Schema = mongoose.Schema;
 const locationsSchema = mongoose.Schema({
   name: {
     type: String,
@@ -10,9 +11,9 @@ const locationsSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
-  inventory_item: {
+  inventory: {
     type: Schema.Types.ObjectId,
-    ref: "inventorydata",
+    ref: "inventory", //used to be able to move inventory collections to our locations (one to one).
   },
 });
 

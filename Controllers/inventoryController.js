@@ -1,11 +1,8 @@
-const express = require("express");
 const mongoose = require("mongoose");
 
 const Inventory = require("../Model/inventorydata.js");
 
-const router = express.Router();
-
-// View a list of all inventory.
+// View a list of all inventory items.
 const getInventory = async (req, res) => {
   try {
     const inventory = await Inventory.find();
@@ -34,7 +31,7 @@ const addInventory = async (req, res) => {
   const newItem = new Inventory({
     name: req.body.name,
     description: req.body.description,
-    registered_on: req.body.created_on,
+    registered_on: req.body.created_on,//created_on creates a date for you in db.
   })
   try {
     await newItem.save();
