@@ -1,12 +1,12 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const port = 3000;
-const url ="mongodb+srv://MAG16:yuwe3yR4e6qD9wtd@cluster0.x6sia.mongodb.net/INVENTORYDB?retryWrites=true&w=majority";
+const port = process.env.PORT || 3000;
+const url = process.env.URL;
 
 const server = express();
 server.use(cors({}));
-
 
 mongoose.connect(url, { useNewUrlParser: true });
 const connect = mongoose.connection;
@@ -21,7 +21,7 @@ try {
 }
 
 const inventoryRouter = require("./Routes/inventory");
-const locationsRouter = require("./Routes/locations")
+const locationsRouter = require("./Routes/locations");
 server.use("/inventory", inventoryRouter);
 server.use("/locations", locationsRouter);
 
@@ -30,6 +30,5 @@ server.get("/", function (req, res, next) {
 });
 
 server.listen(port, () => {
-    console.log(`Shopify server started --> PORT ${port}`)
-})
-
+  console.log(`Shopify server started --> PORT ${port}`);
+});

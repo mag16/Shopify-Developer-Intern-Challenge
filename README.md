@@ -1,13 +1,15 @@
 # Shopify-BackEnd Developer-Intern-Challenge
 
 ## Dependencies used:
-- Express.js: middleware/support for HTTP requests. (npm install express.js)
+- Express.js: middleware/support for HTTP requests. (npm install express.js).
 
-- Nodemon: Updates server as soon as changes are made to your code. (npm install nodemon)
+- Nodemon: Updates server as soon as changes are made to your code. (npm install nodemon).
 
-- Mongoose: connection/Query MongoDb . (npm install Mongoose)
+- Mongoose: connection/Query MongoDb . (npm install Mongoose).
 
-- MongoDb: stores data in key/value pair format. (npm install mongodb)
+- MongoDb: stores data in key/value pair format. (npm install mongodb).
+
+- .env: hide ur keys. (npm install dotenv)
 
 - npm install will add all dependencies used in this project.
 
