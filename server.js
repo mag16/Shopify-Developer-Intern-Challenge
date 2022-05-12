@@ -25,6 +25,10 @@ const locationsRouter = require("./Routes/locations")
 server.use("/inventory", inventoryRouter);
 server.use("/locations", locationsRouter);
 
+server.get("/", function (req, res, next) {
+  res.send("Hello Shopify!!!");
+});
+
 server.listen(port, () => {
     console.log(`Shopify server started --> PORT ${port}`)
 })
